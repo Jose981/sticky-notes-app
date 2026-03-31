@@ -1,42 +1,96 @@
+/* CONTENEDOR PRINCIPAL */
 #root {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* TÍTULO */
+h1 {
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* SELECTOR DE COLOR */
+input[type="color"] {
+  margin: 10px;
+  width: 50px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* FORMULARIO */
+input[type="text"] {
+  padding: 10px;
+  width: 250px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
 }
 
-.card {
-  padding: 2em;
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #646cff;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.read-the-docs {
-  color: #888;
+button:hover {
+  background-color: #4f56d6;
+}
+
+/* TABLERO DE NOTAS */
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* NOTA INDIVIDUAL */
+.note {
+  width: 160px;
+  min-height: 120px;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  transform: rotate(-2deg);
+  transition: transform 0.2s ease;
+}
+
+.note:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+/* TEXTO */
+.note p {
+  margin: 0;
+  word-wrap: break-word;
+}
+
+/* BOTÓN BORRAR */
+.note button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: crimson;
+  padding: 5px 8px;
+  font-size: 12px;
+}
+
+.note button:hover {
+  background: darkred;
+}
+
+/* MENSAJE VACÍO */
+.empty-message {
+  color: #777;
+  margin-top: 20px;
 }
